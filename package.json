@@ -1,0 +1,14 @@
+{
+  "name": "haroon-cinematic-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Haroon Basha's portfolio adapted from the supplied cinematic source.",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "build": "node tools/build.mjs",
+    "preview": "node tools/serve.mjs build"
+  },
+  "engines": { "node": ">=20" }
+}
+

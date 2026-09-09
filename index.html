@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" class="is-booting">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>N. Haroon Basha — Senior Graphic Designer · Video Editor</title>
+<meta name="description" content="Welcome to my world. Portfolio of N. Haroon Basha, Chennai-based Senior Graphic Designer and Video Editor. Brand identity, social campaigns, video and AI-powered content.">
+<meta name="theme-color" content="#000000">
+
+<link rel="preload" href="public/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="src/styles/app.css">
+<link rel="stylesheet" href="src/styles/universe.css">
+<link rel="stylesheet" href="src/styles/chrono.css">
+<link rel="stylesheet" href="src/styles/projects.css">
+<link rel="stylesheet" href="src/styles/finale.css">
+<link rel="stylesheet" href="src/styles/profile.css">
+</head>
+<body id="home">
+<a class="skip-link" href="#about">Skip to portfolio details</a>
+
+<!-- the real heading, for search engines and screen readers; the visible
+     wordmark is drawn on the canvas so video can be clipped inside its letters -->
+<h1 class="sr-only">N. Haroon Basha — Senior Graphic Designer, Video Editor, Creative Visual Specialist. Welcome to my world.</h1>
+
+<div class="stage-wrap">
+  <canvas id="stage" aria-hidden="true"></canvas>
+
+  <!-- ------------------------------------------------------------------ -->
+  <header class="hdr" id="hdr">
+    <svg class="hdr__rule" id="hdrRule" aria-hidden="true" preserveAspectRatio="none">
+      <polyline id="hdrRulePath" fill="none" stroke="currentColor" stroke-width="1.25"
+                vector-effect="non-scaling-stroke"/>
+    </svg>
+
+    <a class="hdr__mark" href="#" aria-label="Haroon, home">
+      <span class="mark-word">HAROON BASHA</span>
+    </a>
+
+    <span class="hdr__div" aria-hidden="true"></span>
+
+    <p class="hdr__roles">
+      <span>Designer</span><span>Video Editor</span><span>Visual Specialist</span>
+    </p>
+
+    <nav class="hdr__nav" aria-label="Primary">
+      <ul>
+        <li><a href="#" class="is-active" data-nav>Home</a></li>
+        <li><a href="#" data-nav>Work</a></li>
+        <li><a href="#" data-nav>About</a></li>
+        <li><a href="#" data-nav>Experience</a></li>
+        <li><a href="#" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__meta">
+      <span class="hdr__metaLabel">Portfolio — MMXXVI</span>
+      <span class="hdr__pips" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+
+    <button class="hdr__burger" id="burger" aria-expanded="false" aria-controls="hdrNavMobile">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </header>
+
+  <!-- ------------------------------------------------------------------ -->
+  <div class="furniture" aria-hidden="true">
+    <p class="welcome" id="welcome">
+      <b class="welcome__dots">•••</b>
+      <span class="welcome__text">Welcome to my world</span>
+      <b class="welcome__dots">•••</b>
+    </p>
+
+    <p class="chip chip--artist" id="chipArtist"><span>•Haroon Basha•</span></p>
+    <p class="chip chip--legend" id="chipLegend"><span>•Designer•</span></p>
+
+    <div class="arrows arrows--l" id="arrowsL"></div>
+    <div class="arrows arrows--r" id="arrowsR"></div>
+    <!-- only the bottom-right grid remains: the top-left one sat under the
+         navigation and fought with it -->
+    <div class="grid-dots grid-dots--br" id="dotsBR"></div>
+  </div>
+
+  <!-- ------------------------------------------------------------------ -->
+  <nav class="menu" id="menu" aria-label="Primary, expanded" hidden>
+    <ul>
+      <li><a href="#" class="is-active" data-nav>Home</a></li>
+      <li><a href="#" data-nav>Work</a></li>
+      <li><a href="#" data-nav>About</a></li>
+      <li><a href="#" data-nav>Experience</a></li>
+      <li><a href="#" data-nav>Contact</a></li>
+    </ul>
+    <p class="menu__tag">••• Welcome to my world •••</p>
+  </nav>
+
+  <!-- ------------------------------------------------------------------ -->
+  <p class="hero-identity"><b>N. HAROON BASHA</b><br>Senior Graphic Designer &amp; Video Editor · Chennai</p>
+  <div class="boot" id="boot">
+    <div class="boot__bar"><i id="bootFill"></i></div>
+    <button class="boot__enter" id="bootEnter" hidden>
+      <span>Enter</span>
+    </button>
+  </div>
+
+  <noscript>
+    <div class="fallback">
+      <p>HAROON</p>
+      <small>This opening is an animated experience. Please enable JavaScript.</small>
+    </div>
+  </noscript>
+</div>
+
+<main class="flow">
+  <!-- the hero above is position:fixed, so this reserves its scroll height -->
+  <div class="hero-spacer" aria-hidden="true"></div>
+  <section class="profile-section" id="about" aria-labelledby="aboutTitle">
+    <p class="profile-kicker">The person behind the work</p>
+    <div class="about-grid"><div>
+      <h2 id="aboutTitle">Bold ideas.<br>Purposeful visuals.</h2>
+      <p>I’m N. Haroon Basha, a Senior Graphic Designer and Video Editor based in Chennai. I bring 5+ years of experience across graphic design, web design, video editing and digital marketing.</p>
+      <p>My B.E. in Computer Science and MBA in Human Resources shape how I work: analytical thinking, creative execution and an understanding of people. I create brand identities, social campaigns, films and AI-powered content for clients in India and internationally.</p>
+      <div class="profile-actions"><a href="#gallery">Explore my work ↗</a><a href="public/Haroon_Basha_Resume_2026.pdf" download>Download resume ↓</a></div>
+    </div><div>
+      <img id="aboutPhoto" alt="N. Haroon Basha" hidden>
+      <div class="profile-stats"><div><strong>5+</strong><span>Years of experience</span></div><div><strong>30+</strong><span>SME brand identities</span></div><div><strong>10+</strong><span>Active brands</span></div></div>
+      <h3>Creative thinking. Technical foundation.</h3>
+      <p>MBA · Human Resources<br>Madras University · 2022–2023</p>
+      <p>B.E. · Computer Science<br>Meenakshi University · 2019 · CGPA 8.029</p>
+      <p>English · Tamil · Hindi (spoken) · Urdu (spoken)</p>
+    </div></div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- The creative-universe film itself, played as supplied. All labels and
+       cards are part of the footage; the DOM adds only what a screen reader
+       needs and a veil that breathes over the loop seam. -->
+  <section class="universe" id="universe" aria-labelledby="uniTitle">
+    <header class="universe__title" id="uniTitle">
+      <p class="universe__over">Scene 02</p>
+      <h2 class="universe__name">The Creative<br>Universe</h2>
+      <p class="universe__sub">Tools · Ideas · People · Impact</p>
+    </header>
+    <ul class="sr-only">
+      <li>Adobe Photoshop</li><li>Illustrator</li><li>InDesign</li><li>DaVinci Resolve</li><li>Canva</li><li>Figma (Basic UI)</li><li>After Effects</li><li>Google Flow</li><li>Higgsfield</li><li>ElevenLabs</li><li>HeyGen</li><li>ChatGPT Pro and Gemini Pro</li>
+    </ul>
+    <video id="uniFilm" muted playsinline loop preload="metadata"
+           poster="public/media/universe.jpg" aria-hidden="true">
+      <source src="public/media/universe.mp4" type="video/mp4">
+    </video>
+    <div class="universe__veil" id="uniVeil" aria-hidden="true"></div><p class="reference-note">Cinematic reference scene · My working tools are listed below</p>
+  </section>
+
+  <!-- ==================================================================== -->
+
+  <section class="profile-section" id="skills" aria-labelledby="skillsTitle">
+    <p class="profile-kicker">Tools behind the ideas</p><h2 id="skillsTitle">My creative toolkit</h2>
+    <div class="skill-columns">
+      <div><h3>Design &amp; motion</h3><ul><li>Adobe Photoshop · Illustrator · InDesign</li><li>DaVinci Resolve · After Effects</li><li>Canva · Figma (Basic UI)</li></ul></div>
+      <div><h3>AI production</h3><ul><li>Google Flow · Higgsfield AI</li><li>ElevenLabs · HeyGen</li><li>ChatGPT Pro · Gemini Pro</li></ul></div>
+      <div><h3>Digital marketing</h3><ul><li>Meta Ads Manager</li><li>WhatsApp &amp; email marketing</li><li>Social media management</li><li>WordPress · MS Office Suite</li></ul></div>
+    </div>
+  </section>
+
+  <section class="chrono" id="chrono" aria-labelledby="chronoTitle">
+    <div class="chrono__pin">
+      <canvas id="chronoStage" aria-hidden="true"></canvas>
+
+      <h2 class="chrono__title" id="chronoTitle">
+        <span>A</span><span>Journey</span><span>Through</span><span>Time</span>
+      </h2>
+      <p class="chrono__rail" aria-hidden="true">
+        <i></i>
+        <span>Ideas</span><span>Experiences</span><span>People</span>
+        <span>Projects</span><span>Me</span>
+        <i></i>
+      </p>
+
+      <p class="chrono__hint" aria-hidden="true">
+        Move<br>to travel<br>through time<i></i>
+      </p>
+      <p class="chrono__note chrono__note--bl" aria-hidden="true">
+        Same<br>curiosity<br>a brighter<br>tomorrow
+      </p>
+      <p class="chrono__note chrono__note--br" aria-hidden="true">
+        Still<br>designing<br>what's<br>next<i></i>
+      </p>
+
+      <div class="chrono__deck" id="chronoDeck"></div>
+
+      <!-- the figure's own layer, stacked over the deck: he stands in front
+           of the timeline, looking at his journey -->
+      <canvas id="chronoFront" aria-hidden="true"></canvas>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+
+  <section class="profile-section" id="experience" aria-labelledby="experienceTitle">
+    <p class="profile-kicker">Experience · 2019–2026</p><h2 id="experienceTitle">A career in creation</h2>
+    <ol class="career-list">
+      <li><time>Jan 2023–Present</time><div><h3>Integfarms My Health School</h3><p>Senior Graphic Designer. Brand identity, promotional video, reels, AI content and motion graphics. Monthly social creative packages for 10+ active brands.</p></div></li>
+      <li><time>2026 · Freelance</time><div><h3>Taj Groups · Hardwares, Materials &amp; Trades</h3><p>Visual Designer &amp; Brand Consultant. Branding, brochures, catalogs, digital ads and print materials for exhibitions and showrooms.</p></div></li>
+      <li><time>2025 · Freelance</time><div><h3>North Florida Sangam · USA</h3><p>Graphic Designer. Event promotions, social media graphics, video edits and motion graphics for cultural programs, delivered through remote collaboration.</p></div></li>
+      <li><time>2021–2023</time><div><h3>Truefoodstore</h3><p>Social Media Designer &amp; Digital Marketing Executive. Product campaigns, short-form video, content calendars, community engagement and WordPress website management.</p></div></li>
+      <li><time>Feb 2019–Aug 2020</time><div><h3>Webberax</h3><p>Associate Software Engineer – Digital Marketing. Campaign graphics, email marketing, performance analysis and marketing automation support.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="gallery" id="gallery" aria-labelledby="galleryTitle">
+    <div class="gallery__pin">
+      <canvas id="galleryStage" aria-hidden="true"></canvas>
+
+      <div class="gallery__world">
+        <div class="gallery__deck" id="galleryDeck"></div>
+        <img class="gallery__person" id="galleryPerson"
+             src="public/projects/person.png" alt="" draggable="false">
+      </div>
+
+      <h2 class="g-label g-label--projects" id="galleryTitle">Projects</h2>
+      <p class="reference-note">Reference artwork · Select a card for my project experience</p>
+      <p class="g-label g-label--ideas" aria-hidden="true">
+        Ideas<br>Interfaces<br>Experiences<br><b>Real Impact</b>
+      </p>
+      <p class="g-label g-label--scroll" aria-hidden="true">
+        Scroll<br>Explore<br>Interact
+      </p>
+      <p class="g-label g-label--real" aria-hidden="true">
+        Real<br>Projects<br>Real<br>Stories
+      </p>
+      <p class="g-label g-label--tomorrow" aria-hidden="true">
+        Designing<br>A Brighter<br>Tomorrow
+      </p>
+      <span class="g-label g-label--num" id="galleryNum" aria-hidden="true">01</span>
+    </div>
+  </section>
+
+
+  <section class="profile-section" id="contact" aria-labelledby="contactTitle">
+    <p class="profile-kicker">Let’s create what’s next</p><h2 id="contactTitle">Have a story?<br>Let’s make it visible.</h2>
+    <p>Senior creative and digital marketing opportunities · Design, video and brand collaborations</p>
+    <a class="contact-email" href="mailto:rkobasha3457@gmail.com" data-email>rkobasha3457@gmail.com ↗</a>
+    <p><a href="tel:+919941406180">+91 99414 06180</a> · Chennai, India</p>
+    <div class="profile-actions"><a href="https://hbdesignstudio.lovable.app" target="_blank" rel="noopener noreferrer">View my existing portfolio ↗</a><a href="public/Haroon_Basha_Resume_2026.pdf" download>Download resume ↓</a></div>
+  </section>
+
+</main>
+
+<!-- ====================================================================== -->
+<footer class="fin" id="fin" aria-label="Closing">
+  <div class="fin__pin">
+  <h2 class="sr-only">Haroon</h2>
+
+  <div class="fin__stage1" id="finStage1">
+    <canvas id="finBack" aria-hidden="true"></canvas>
+    <canvas id="finMan" aria-hidden="true"></canvas>
+
+    <p class="f-cap f-cap--tl" aria-hidden="true">
+      Ideas<br>Designs<br>Experiences<br>Real Impact
+    </p>
+    <blockquote class="f-cap f-cap--quote">
+      &ldquo;Every<br>Brand.<br>A Story<br>To Tell.&rdquo;
+    </blockquote>
+    <p class="f-cap f-cap--blw" aria-hidden="true">A<br>Designer&rsquo;s<br>World</p>
+    <p class="f-cap f-cap--tr" aria-hidden="true">
+      Same<br>Passion<br>A Brighter<br>Tomorrow
+    </p>
+    <p class="f-cap f-cap--br" aria-hidden="true">Design<br>Build<br>Explore<br>Repeat</p>
+  </div>
+
+  <div class="fin__dim" id="finDim" aria-hidden="true"></div>
+
+  <!-- the second frame of the finale: slides in from the left on scroll.
+       Dormant until its image exists (see boot6's candidate list). -->
+  <figure class="fin__frame2" id="finFrame2" aria-hidden="true" hidden>
+    <img id="finFrame2Img" alt="" draggable="false" decoding="async">
+  </figure>
+
+  <div class="fin__bar">
+    <a href="#" data-nav>Contact</a>
+    <nav class="fin__soc" aria-label="Social">
+      <a href="mailto:rkobasha3457@gmail.com">Email</a>
+      <a href="https://hbdesignstudio.lovable.app" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="?motion=off" id="motionLink">Pause motion</a>
+    </nav>
+    <small class="fin__c">&copy; 2026 N. Haroon Basha &mdash; All rights reserved</small>
+  </div>
+  </div>
+</footer>
+
+<dialog id="projectDialog" aria-labelledby="projectTitle"><button class="dialog-close" type="button">Close ×</button><h2 id="projectTitle"></h2><p class="project-client"></p><p class="project-description"></p><a class="dialog-link" href="https://hbdesignstudio.lovable.app" target="_blank" rel="noopener noreferrer">View portfolio ↗</a></dialog>
+<script type="module" src="src/personalize.js"></script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
