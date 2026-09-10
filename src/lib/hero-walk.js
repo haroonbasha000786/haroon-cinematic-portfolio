@@ -1,6 +1,6 @@
 // Hero-only generated walk. The other scenes retain their original media.
 // Convert a green-screen sprite sheet to the reference's RGB + matte format.
-const SHEET = 'public/images/haroon-walk-sheet.png';
+const SHEET = 'public/images/haroon-suit-walk-sheet.png';
 const ORDER = [0, 6, 2, 1, 3, 2, 7, 5];
 const FPS = 8;
 
@@ -24,7 +24,7 @@ export async function heroWalkClip() {
     ctx.clearRect(0, 0, w, h);
     ctx.drawImage(image, (frame % 4) * w, Math.floor(frame / 4) * h, w, h, 0, 0, w, h);
     const pixels = ctx.getImageData(0, 0, w, h);
-    // Chroma dominance protects white trousers, patterned clothing and skin.
+    // Chroma dominance preserves the navy suit, white shirt and skin.
     // The source itself remains unchanged; compositing happens at runtime.
     let top = h, headMass = 0, headX = 0;
     for (let y = 0; y < h; y++) {
