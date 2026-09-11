@@ -1,8 +1,5 @@
-// Hero-only generated walk. The other scenes retain their original media.
-// Convert a green-screen sprite sheet to the reference's RGB + matte format.
+// A relaxed, planted pose from the approved suit image; no regenerated face.
 const SHEET = 'public/images/haroon-suit-walk-sheet.png';
-const ORDER = [0, 6, 2, 1, 3, 2, 7, 5];
-const FPS = 8;
 
 export async function heroWalkClip() {
   const image = new Image();
@@ -20,7 +17,7 @@ export async function heroWalkClip() {
   const out = packed.getContext('2d');
   const frames = [];
 
-  for (let frame = 0; frame < 8; frame++) {
+  for (const frame of [2]) {
     ctx.clearRect(0, 0, w, h);
     ctx.drawImage(image, (frame % 4) * w, Math.floor(frame / 4) * h, w, h, 0, 0, w, h);
     const pixels = ctx.getImageData(0, 0, w, h);
@@ -67,18 +64,34 @@ export async function heroWalkClip() {
 
   let elapsed = 0, resumed = 0, playing = false, previous = -1;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches || new URLSearchParams(location.search).get('motion') === 'off';
-  const paint = (index) => { out.clearRect(0, 0, w * 2, h); out.drawImage(frames[index], 0, 0); };
-  paint(2);
+  const paint = (time) => {
+    const seconds = time / 1000;
+    const settle = Math.min(1, seconds / 2);
+    // A visible but restrained shift (about 5px at the head in this texture).
+    // Keep the ankle pivot fixed and transform the original portrait intact.
+    const angle = reduced ? 0 : settle * (.009 * Math.sin(seconds * Math.PI * 2 / 5.6)
+      + .0015 * Math.sin(seconds * Math.PI * 2 / 9.7));
+    out.fillStyle = '#000'; out.fillRect(0, 0, w * 2, h);
+    for (let half = 0; half < 2; half++) {
+      out.save();
+      out.beginPath(); out.rect(half * w, 0, w, h); out.clip();
+      out.translate(half * w + w / 2, h * .97);
+      out.rotate(angle);
+      out.drawImage(frames[0], half * w, 0, w, h, -w / 2, -h * .97, w, h);
+      out.restore();
+    }
+  };
+  paint(0);
   return {
-    el: packed, w, h, ready: true, isPhoto: true, isGeneratedWalk: true,
+    el: packed, w, h, ready: true, isPhoto: true, isRelaxedPortrait: true,
     whenReady: async () => {},
     play: async () => { if (!reduced && !playing) { resumed = performance.now(); playing = true; } return true; },
     pause: () => { if (playing) elapsed += performance.now() - resumed; playing = false; },
     poll: () => {
       const time = elapsed + (playing ? performance.now() - resumed : 0);
-      const index = reduced ? 2 : ORDER[Math.floor(time * FPS / 1000) % ORDER.length];
+      const index = reduced ? 0 : Math.floor(time * 60 / 1000);
       if (index === previous) return false;
-      previous = index; paint(index); return true;
+      previous = index; paint(time); return true;
     },
     box: () => [0, .025, 1, .99],
     seamFade: () => 1,

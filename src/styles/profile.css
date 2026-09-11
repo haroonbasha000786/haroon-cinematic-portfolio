@@ -28,6 +28,16 @@
 .career-list time { color: #ef4444; font: 400 16px var(--ui); }
 .career-list p { margin: 8px 0 0; }
 .contact-email { font-size: clamp(20px, 3.5vw, 52px); overflow-wrap: anywhere; }
+.contact-reveals { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; align-items: flex-start; }
+.contact-reveal { border: 1px solid #684444; background: #120c0c; max-width: 100%; }
+.contact-reveal summary { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 18px; color: #f5eaea; font: 500 18px var(--ui); cursor: pointer; list-style: none; }
+.contact-reveal summary::-webkit-details-marker { display: none; }
+.contact-reveal summary:hover { background: #321315; }
+.contact-reveal summary:focus-visible { outline: 2px solid #ff6666; outline-offset: 4px; }
+.contact-reveal summary svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.contact-reveal-plus { margin-left: auto; color: #ff6666; transition: transform .18s ease; }
+.contact-reveal[open] .contact-reveal-plus { transform: rotate(45deg); }
+.contact-reveal-info { padding: 14px 18px 18px; border-top: 1px solid #382828; font: 400 clamp(16px, 2.5vw, 25px)/1.5 var(--ui); overflow-wrap: anywhere; }
 #aboutPhoto { width: 100%; max-height: 480px; object-fit: contain; object-position: bottom; background: radial-gradient(ellipse at bottom, #431213, #070707 65%); }
 .hero-identity { position: absolute; z-index: 6; bottom: 3.5vh; left: 5vw; margin: 0; font-size: clamp(14px, 1.25vw, 19px); letter-spacing: .05em; color: #ccc; }
 .hero-identity b { color: #fff; }

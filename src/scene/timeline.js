@@ -50,9 +50,9 @@ export function sample(t, nLetters, order) {
   const hero = {
     reveal: hp,                                   // 0..1 dissolve out of black
     opacity: smoothstep(0, 0.35, hp),
-    // he arrives from slightly further away and settles into final scale
-    scale: lerp(0.885, 1, heroEase),
-    dy: lerp(0.045, 0, heroEase),                 // fraction of his height
+    // A gentle portrait pullback, with the feet anchored in the composition.
+    scale: lerp(1.065, 1, smoothstep(0, 1, span(t, T.heroIn, T.settled))),
+    dy: 0,
     shadow: smoothstep(0.25, 0.9, hp),
   };
 
